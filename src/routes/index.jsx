@@ -1,9 +1,9 @@
 import { memo } from "react";
 import { Routes, Route } from "react-router-dom";
-
-import Signup from "../views/screens/login";
-import Login from "../views/screens/signup";
-import Home from "../views/screens/home";
+import { useLocationTitle } from "../hooks";
+import Signup from "../views/screens/Login";
+import Login from "../views/screens/Signup";
+import Home from "../views/screens/Home";
 
 const ROUTES = {
   home: {
@@ -35,17 +35,38 @@ function AppRoutes() {
             key={index}
             path={route.path}
             element={
-              // <PrivateRoute title={route.title}>
-              <route.component />
-              // </PrivateRoute>
+              <PrivateRoute title={route.title}>
+                <route.component />
+              </PrivateRoute>
             }
           />
         ) : (
-          <Route key={index} path={route.path} element={<route.component />} />
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              <PublicRoute title={route.title}>
+                <route.component />
+              </PublicRoute>
+            }
+          />
         )
       )}
     </Routes>
   );
+}
+
+function PublicRoute({ title, children }) {
+  useLocationTitle(title);
+
+  return children;
+}
+
+function PrivateRoute({ title, children }) {
+  useLocationTitle(title);
+
+  // check auth token here
+  return children;
 }
 
 export default memo(AppRoutes);
