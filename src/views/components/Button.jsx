@@ -11,6 +11,7 @@ export default function Button({ onClick, loading, children }) {
       loadingIndicator="Loading…"
       sx={{
         fontWeight: "bold",
+        padding: 1.5,
       }}
     >
       {children}

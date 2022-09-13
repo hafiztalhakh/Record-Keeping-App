@@ -27,7 +27,7 @@ function Header() {
   const [anchor, setAnchor] = useState(null);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ mb: 1 }}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Record Keeping Application

@@ -29,6 +29,16 @@ h4 {
   font-weight: bold !important;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 a {
   color: inherit;
+}
+
+@media (max-width: 991px) {
+  a {
+    font-size: 12px;
+  }
 }

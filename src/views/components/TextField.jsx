@@ -51,7 +51,12 @@ export default function TextField({
   return (
     <Box bgcolor={"background.default"} color={"text.primary"}>
       <MuiTextField
-        sx={{ mb: 1 }}
+        sx={{
+          mb: 1,
+          input: {
+            padding: "8px 0 10px",
+          },
+        }}
         {...rest}
         fullWidth
         variant="standard"

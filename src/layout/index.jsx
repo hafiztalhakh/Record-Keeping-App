@@ -3,7 +3,7 @@ import Routes from "../routes";
 import Header from "../views/components/Header";
 
 function Layout() {
-  const darkTheme = createTheme({
+  const theme = createTheme({
     palette: {
       mode: "dark",
     },
@@ -19,7 +19,7 @@ function Layout() {
   });
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <Box
         sx={{ minHeight: "100vh" }}
         bgcolor={"background.default"}
