@@ -10,8 +10,8 @@ export default function Login() {
     <MiddleContainer>
       <h1>Login</h1>
       <Box mt={2}>
-        <InputLabel>Username:</InputLabel>
-        <TextField placeholder="Enter your Username" />
+        <InputLabel>Email Address:</InputLabel>
+        <TextField placeholder="Enter your Email Address" />
       </Box>
       <Box mt={2}>
         <InputLabel>Password:</InputLabel>
@@ -20,7 +20,7 @@ export default function Login() {
       <Box mt={1} sx={{ textAlign: "right" }}>
         <Link to="/recover-password">Forget Password</Link>
       </Box>
-      <Box mt={5} sx={{ textAlign: "center" }}>
+      <Box mt={5}>
         <Button loading={false}>Login</Button>
       </Box>
       <Box mt={3} sx={{ textAlign: "center" }}>
