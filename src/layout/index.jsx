@@ -5,7 +5,7 @@ import Header from "../views/components/Header";
 function Layout() {
   const theme = createTheme({
     palette: {
-      mode: "dark",
+      mode: "light",
     },
     typography: {
       fontFamily: "'Comfortaa', cursive",

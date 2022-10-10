@@ -37,8 +37,9 @@ a {
   color: inherit;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
+  p,
   a {
     font-size: 12px;
   }
-}
+} */
